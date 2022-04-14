@@ -1,0 +1,40 @@
+{
+  "clients": [
+    {
+      "id": "001",
+      "businessName": "UAB Company1",
+      "businessCode": "800000000",
+      "vatNumber": "LT100000000000",
+      "businessAddress": {
+        "streetAddress": "Gatve 24",
+        "city": "Klaipeda",
+        "postalCode": "91000",
+        "country": "Lietuva"
+      },
+      "shippingAddress": {
+        "streetAddress": "Gatve 24",
+        "city": "Klaipeda",
+        "postalCode": "91000",
+        "country": "Lietuva"
+      }
+    },
+    {
+      "id": "002",
+      "businessName": "UAB Company1",
+      "businessCode": "800000000",
+      "vatNumber": "LT100000000000",
+      "businessAddress": {
+        "streetAddress": "Gatve 24",
+        "city": "Klaipeda",
+        "postalCode": "91000",
+        "country": "Lietuva"
+      },
+      "shippingAddress": {
+        "streetAddress": "Gatve 24",
+        "city": "Klaipeda",
+        "postalCode": "91000",
+        "country": "Lietuva"
+      }
+    }
+  ]
+}
