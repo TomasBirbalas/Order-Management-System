@@ -8,10 +8,12 @@ namespace Business
 {
     public class Product
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public decimal CurrentPrice { get; set; }
-        public Product(string name, decimal currentPrice)
+        public Product(int id, string name, decimal currentPrice)
         {
+            Id = id;
             Name = name;
             CurrentPrice = currentPrice;
         }
