@@ -12,6 +12,6 @@
     <Folder Include="JSONdata\" />
   </ItemGroup>
 
-  <ProjectExtensions><VisualStudio><UserProperties jsondata_4client_1json__JsonSchema="https://appsemble.app/api.json" /></VisualStudio></ProjectExtensions>
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>
