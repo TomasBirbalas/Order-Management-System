@@ -1,4 +1,6 @@
 ﻿using System;
+using Business;
+using DataAccess;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Services;
 
 namespace Order_Management_System
 {
@@ -17,5 +20,14 @@ namespace Order_Management_System
             InitializeComponent();
         }
 
+        private void generateBtn_Click(object sender, EventArgs e)
+        {
+            AllOrdersOfClient clients = new AllOrdersOfClient();
+            string result = "";
+
+            result = clients.Generate();
+
+            displayBlock.Text = result;
+        }
     }
 }
