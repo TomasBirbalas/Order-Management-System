@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Services;
+using JsonSerializeris;
 
 namespace Order_Management_System
 {
@@ -18,6 +19,8 @@ namespace Order_Management_System
         public Form1()
         {
             InitializeComponent();
+            SerializeData serializeData = new SerializeData();
+            serializeData.GenerateJsonFile();
         }
 
         private void generateBtn_Click(object sender, EventArgs e)
