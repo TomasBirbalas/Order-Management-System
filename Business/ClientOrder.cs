@@ -8,15 +8,13 @@ namespace Business
 {
     public class ClientOrder
     {
-        public Client Client { get; }
-        public List<Order> OrderList { get; }
-        public string OrderStatus { get; }
+        public Client Client { get; set; }
+        public List<Order> OrderList { get; set; }
 
-        public ClientOrder(Client client, List<Order> orderList, string orderStatus)
+        public ClientOrder(Client client, List<Order> orderList)
         {
             Client = client;
             OrderList = orderList;
-            OrderStatus = orderStatus;
         }
     }
 }

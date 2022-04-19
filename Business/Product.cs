@@ -8,8 +8,8 @@ namespace Business
 {
     public class Product
     {
-        public string Name { get; }
-        public decimal CurrentPrice { get; }
+        public string Name { get; set; }
+        public decimal CurrentPrice { get; set; }
         public Product(string name, decimal currentPrice)
         {
             Name = name;
