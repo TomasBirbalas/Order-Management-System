@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Busine
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{52D73096-2A79-405E-94D2-52AECA41CD5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSerializeris", "JsonSerializer\JsonSerializeris.csproj", "{2F241CEB-F5C8-4F59-9D4E-B3787CE59492}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonSerializeris", "JsonSerializer\JsonSerializeris.csproj", "{2F241CEB-F5C8-4F59-9D4E-B3787CE59492}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deserializer", "Deserializer\Deserializer.csproj", "{9EB607C7-320E-4EAB-A771-997A69D6E3A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{2F241CEB-F5C8-4F59-9D4E-B3787CE59492}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F241CEB-F5C8-4F59-9D4E-B3787CE59492}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F241CEB-F5C8-4F59-9D4E-B3787CE59492}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EB607C7-320E-4EAB-A771-997A69D6E3A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB607C7-320E-4EAB-A771-997A69D6E3A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EB607C7-320E-4EAB-A771-997A69D6E3A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EB607C7-320E-4EAB-A771-997A69D6E3A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
