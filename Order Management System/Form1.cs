@@ -27,6 +27,7 @@ namespace Order_Management_System
         private void generateBtn_Click(object sender, EventArgs e)
         {
             GenerateCustomersReport clients = new GenerateCustomersReport();
+            GenerateAllCustomersReport allCustomers = new GenerateAllCustomersReport();
             string result = "";
 
             displayBlock.Text = result;
@@ -41,25 +42,10 @@ namespace Order_Management_System
                 {
                     // Can use dialog.FileName
                     string fileName = dialog.FileName;
-                    clients.GenerateAllPendingPaymentOrders(fileName);
+                    allCustomers.GenerateAllCustomers(fileName);
                     MessageBox.Show("Report is generated!!!");
                 }
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
-
-
     }
 }
