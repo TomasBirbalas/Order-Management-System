@@ -54,12 +54,12 @@ namespace Services
                     pendingOrders += $"Order: {order.Id}: {sumOfCurrentOrder} Eur\r\n";
                 });
                 listOfTotal.Add(sumOfAllOrders);
-                total += $"Total:{sumOfAllOrders}\r\n";
+                total += $"Total unpaid orders: {pendingPaymentOrders.Count} Total:{sumOfAllOrders}\r\n";
 
                 result += $"{clientList} \r\n{pendingOrders}{total}";
             }
             sumOfTotalPendingPayments = listOfTotal.Sum();
-            result += $"{sumOfTotalPendingPayments}\r\n";
+            result += $"Total unpaid orders sum: {sumOfTotalPendingPayments}\r\n";
             return result;
         }
     }
