@@ -33,7 +33,7 @@ namespace Order_Management_System
 
             using (SaveFileDialog dialog = new SaveFileDialog())
             {
-                dialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                dialog.Filter = "html files (*.html)|*.html";
                 dialog.FilterIndex = 2;
                 dialog.RestoreDirectory = true;
 
