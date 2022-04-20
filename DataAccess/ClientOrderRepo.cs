@@ -1,21 +1,22 @@
 ﻿using Business;
+using Deserializer;
 using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace DataAccess
 {
     public class ClientOrderRepo
     {
-        public List<ClientOrder> DeserializeDataFile()
-        {
-            var path = @"..\..\..\..\DataAccess\JSONdata\ProjectData.json";
-            var jsonString = File.ReadAllText(path);
-            List<ClientOrder> clientOrders = JsonSerializer.Deserialize<List<ClientOrder>>(jsonString);
+        private List<ClientOrder> orderList { get; }
 
-            return clientOrders;
+        public ClientOrderRepo()
+        {
+            DeserializeAllData deserializeAllData = new DeserializeAllData();
+            orderList = deserializeAllData.DeserializeDataFile();
+        }
+        public List<ClientOrder> RetrieveClientOrderList()
+        {
+            return orderList;
         }
     }
 }
