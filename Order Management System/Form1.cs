@@ -19,16 +19,16 @@ namespace Order_Management_System
         public Form1()
         {
             InitializeComponent();
-            SerializeData serializeData = new SerializeData();
-            serializeData.GenerateJsonFile();
+            // SerializeData serializeData = new SerializeData();
+            // serializeData.GenerateJsonFile();
         }
 
         private void generateBtn_Click(object sender, EventArgs e)
         {
-            AllOrdersOfClient clients = new AllOrdersOfClient();
+            GenerateCustomersReport clients = new GenerateCustomersReport();
             string result = "";
 
-            result = clients.Generate();
+            result = clients.GenerateAllPendingPaymentOrders();
 
             displayBlock.Text = result;
         }
