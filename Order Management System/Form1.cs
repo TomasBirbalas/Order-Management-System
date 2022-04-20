@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Services;
 using JsonSerializeris;
+using System.IO;
 
 namespace Order_Management_System
 {
@@ -28,10 +29,37 @@ namespace Order_Management_System
             GenerateCustomersReport clients = new GenerateCustomersReport();
             string result = "";
 
-            clients.GenerateAllPendingPaymentOrders();
-            MessageBox.Show("Report is generated!!!");
-
             displayBlock.Text = result;
+
+            using (SaveFileDialog dialog = new SaveFileDialog())
+            {
+                dialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                dialog.FilterIndex = 2;
+                dialog.RestoreDirectory = true;
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Can use dialog.FileName
+                    string fileName = dialog.FileName;
+                    clients.GenerateAllPendingPaymentOrders(fileName);
+                    MessageBox.Show("Report is generated!!!");
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
+
+
     }
 }

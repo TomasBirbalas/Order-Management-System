@@ -14,10 +14,9 @@ namespace Services
         public ClientOrderRepo clientOrderRepo { get; set; }
         List<ClientOrder> clientOrders { get; set; }
 
-        public void GenerateAllPendingPaymentOrders()
+        public void GenerateAllPendingPaymentOrders(string fileName)
         {
-            string filepath = @"..\..\..\..\Reports\Unpaid\index.html";
-            StreamWriter page = new StreamWriter(filepath);
+            StreamWriter page = new StreamWriter(fileName);
 
             page.WriteLine("<!DOCTYPE html><html><body style='width:960px; display:block; margin: 0 auto;'>");
             page.WriteLine($"<h1 style='text-align: center;'>Pending Payment Report {DateTime.Now}</h1>");
