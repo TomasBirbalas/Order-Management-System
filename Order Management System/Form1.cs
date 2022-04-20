@@ -28,7 +28,8 @@ namespace Order_Management_System
             GenerateCustomersReport clients = new GenerateCustomersReport();
             string result = "";
 
-            result = clients.GenerateAllPendingPaymentOrders();
+            clients.GenerateAllPendingPaymentOrders();
+            MessageBox.Show("Report is generated!!!");
 
             displayBlock.Text = result;
         }
