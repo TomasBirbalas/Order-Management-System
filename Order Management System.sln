@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonSerializeris", "JsonSer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deserializer", "Deserializer\Deserializer.csproj", "{9EB607C7-320E-4EAB-A771-997A69D6E3A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unitTests", "unitTests\unitTests.csproj", "{FBE7557B-76C6-4EC5-B2C6-7EE931AB3B98}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{9EB607C7-320E-4EAB-A771-997A69D6E3A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EB607C7-320E-4EAB-A771-997A69D6E3A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EB607C7-320E-4EAB-A771-997A69D6E3A6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FBE7557B-76C6-4EC5-B2C6-7EE931AB3B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FBE7557B-76C6-4EC5-B2C6-7EE931AB3B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FBE7557B-76C6-4EC5-B2C6-7EE931AB3B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FBE7557B-76C6-4EC5-B2C6-7EE931AB3B98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
