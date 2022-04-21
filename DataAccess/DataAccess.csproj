@@ -9,10 +9,6 @@
     <ProjectReference Include="..\Deserializer\Deserializer.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="JSONdata\" />
-  </ItemGroup>
-
   <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>
