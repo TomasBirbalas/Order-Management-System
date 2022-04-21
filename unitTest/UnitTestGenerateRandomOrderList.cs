@@ -16,6 +16,7 @@ namespace unitTest
             var actual = productsInOrder.Count > 0 ? true : false ;
             var expected = true;
             Assert.True(actual == expected);
+
         }
     }
 }
