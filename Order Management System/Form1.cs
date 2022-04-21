@@ -28,9 +28,6 @@ namespace Order_Management_System
         {
             GenerateCustomersReport clients = new GenerateCustomersReport();
             GenerateAllCustomersReport allCustomers = new GenerateAllCustomersReport();
-            string result = "";
-
-            displayBlock.Text = result;
 
             using (SaveFileDialog dialog = new SaveFileDialog())
             {
@@ -51,9 +48,6 @@ namespace Order_Management_System
         private void generateAllCustomersReport_Click(object sender, EventArgs e)
         {
             GenerateAllCustomersReport allCustomers = new GenerateAllCustomersReport();
-            string result = "";
-
-            displayBlock.Text = result;
 
             using (SaveFileDialog dialog = new SaveFileDialog())
             {

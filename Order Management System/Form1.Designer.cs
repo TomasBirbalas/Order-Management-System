@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.generatePendingPaymentReport = new System.Windows.Forms.Button();
-            this.displayBlock = new System.Windows.Forms.TextBox();
             this.generateAllCustomersReport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -42,15 +41,6 @@
             this.generatePendingPaymentReport.Text = "Generate report of pending payments";
             this.generatePendingPaymentReport.UseVisualStyleBackColor = true;
             this.generatePendingPaymentReport.Click += new System.EventHandler(this.generatePendingPaymentReport_Click);
-            // 
-            // displayBlock
-            // 
-            this.displayBlock.Location = new System.Drawing.Point(368, 104);
-            this.displayBlock.Multiline = true;
-            this.displayBlock.Name = "displayBlock";
-            this.displayBlock.ReadOnly = true;
-            this.displayBlock.Size = new System.Drawing.Size(264, 166);
-            this.displayBlock.TabIndex = 1;
             // 
             // generateAllCustomersReport
             // 
@@ -68,19 +58,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.generateAllCustomersReport);
-            this.Controls.Add(this.displayBlock);
             this.Controls.Add(this.generatePendingPaymentReport);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button generatePendingPaymentReport;
-        private System.Windows.Forms.TextBox displayBlock;
         private System.Windows.Forms.Button generateAllCustomersReport;
     }
 }
