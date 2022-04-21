@@ -18,7 +18,7 @@ namespace Services
         {
             StreamWriter page = new StreamWriter(fileName);
 
-            page.WriteLine("<!DOCTYPE html><html><body style='width:960px; display:block; margin: 0 auto;'>");
+            page.WriteLine("<!DOCTYPE html><html><head><style>body{font-family:sans-serif}h2,h3,h4,p{margin:0}table{border-spacing:0}td,th{border:1px solid #c9c9c9;padding:8px}.client-block td{padding:16px}.order-list-heading th{text-align:left}.order-list{background-color:#f8f8f8}.order-list:nth-child(odd){background-color:#f1f1f1}.totalAmount{display:flex;justify-content:space-between;align-items:center;margin:16px 0;}</style></head><body style='width:960px; display:block; margin: 0 auto;'>");
             page.WriteLine($"<h1 style='text-align: center;'>Pending Payment Report {DateTime.Now}</h1>");
 
             clientOrderRepo = new ClientOrderRepo();
@@ -32,78 +32,69 @@ namespace Services
             var listOfTotal = new List<decimal> {};
             foreach (var client in clientOrders)
             {
-                page.WriteLine("<table style='width:960px;'><tbody>");
                 pendingPaymentOrders = client.OrderList.FindAll(order => order.OrderStatus == "Pending_payment");
-
-                page.WriteLine($@"
-                    <tr>
-                        <td style = 'width: 240px;'colspan = '2'>
+                if (pendingPaymentOrders.Count > 0)
+                {
+                    page.WriteLine("<table style = 'width:960px;'><tbody>");
+                    page.WriteLine($@"
+                    <tr class = 'client-block'>
+                        <td style = 'width: 33.33%;'>
                             <h2>{client.Client.BusinessName}</h2>
                         </td>
-                        <td style = 'width: 240px;'colspan = '2'>
+                        <td style = 'width: 66.33%;' colspan = '2'>
                             <h4>VAT number: {client.Client.VatNumber}</h4>
                             <h4>Company code: {client.Client.BusinessCode}</h4>
                             <h4>Address: {client.Client.BusinessAddress.Street}, {client.Client.BusinessAddress.City}, {client.Client.BusinessAddress.PostalCode}, {client.Client.BusinessAddress.Country}</h4>
                         </td>
                     </tr>
-                    <tr>
-                        <td style='width:240px;'>Order Id</td>
-                        <td style='width:240px;'>Order Date</td>
-                        <td style='width:240px;'>Order Total</td>
-                        <td style='width:240px;'>1</td>
+                    <tr class='order-list-heading'>
+                        <th style = 'width: 33.33%;'>Order Id</th>
+                        <th style = 'width: 33.33%;'>Order Date</th>
+                        <th style = 'width: 33.33%;'>Order Total</th>
                     </tr>"
-                );
+                    );
 
-                decimal sumOfCurrentOrder = 0;
-                decimal sumOfAllOrders = 0;
+                    decimal sumOfAllOrders = pendingPaymentOrders.Sum(order => order.OrderTotalAmount); ;
 
-                var totalnumbers = new List<decimal> { };
-                pendingPaymentOrders.ForEach(order =>
-                {
-                    var numbers = new List<decimal> { };
-                    order.OrderProducts.ForEach(product =>
+                    pendingPaymentOrders.ForEach(order =>
                     {
-                        decimal currentPrice = product.Product.CurrentPrice;
-                        int quantity = product.Quantity;
-                        decimal total = currentPrice * quantity;
-                        numbers.Add(total);
+                        page.WriteLine($@"
+                            <tr class = 'order-list'>
+                                <td>{order.Id}</td>
+                                <td>{order.OrderDate}</td>
+                                <td>{order.OrderTotalAmount} Eur</td>
+                            </tr>"
+                        );
                     });
-                    sumOfCurrentOrder = numbers.Sum();
+                    listOfTotal.Add(sumOfAllOrders);
 
                     page.WriteLine($@"
                         <tr>
-                            <td style='width:240px;'>{order.Id}</td>
-                            <td style='width:240px;'>{order.OrderDate}</td>
-                            <td style='width:240px;'>{sumOfCurrentOrder} Eur</td>
-                            <td style='width:240px;'></td>
+                            <td colspan = '2'>Count of unpaid orders</td>
+                            <td>{pendingPaymentOrders.Count}</td>
+                        </tr>
+                        <tr>
+                            <td colspan = '2'>Total pending payment amount</td>
+                            <td>{sumOfAllOrders} Eur</td>
                         </tr>"
                     );
-
-                    totalnumbers.Add(sumOfCurrentOrder);
-                    sumOfAllOrders = totalnumbers.Sum();
-                });
-                listOfTotal.Add(sumOfAllOrders);
-
-                page.WriteLine($@"
-                    <tr>
-                        <td style='width:240px;'colspan='3'>Count of unpaid orders</td>
-                        <td style='width:240px;'>{pendingPaymentOrders.Count}</td>
-                    </tr>
-                    <tr>
-                        <td style='width:240px;' colspan='3'>Total pending payment sum</td>
-                        <td style='width:240px;'>{sumOfAllOrders} Eur</td>
-                    </tr>"
-                );
-                string danger = pendingPaymentOrders.Count > 2 || sumOfAllOrders > 2000 ? "Red" : "Green";
-                page.WriteLine($@"
-                    <tr>
-                        <td style='width:240px; Background-color:{danger}' colspan='4'> </td>
-                    </tr>"
-                );
-                page.WriteLine("</tbody></table>");
+                    string customerStatus = pendingPaymentOrders.Count > 2 || sumOfAllOrders > 2000 ? "Red" : "Green";
+                    page.WriteLine($@"
+                        <tr>
+                            <td style = 'Background-color:{customerStatus}; border:none' colspan = '3'> </td>
+                        </tr>"
+                    );
+                    page.WriteLine("</tbody></table>");
+                }
             }
+            
+
             sumOfTotalPendingPayments = listOfTotal.Sum();
-            result += $"Total unpaid orders sum: {sumOfTotalPendingPayments}\r\n";
+            page.WriteLine($@"<div class = 'totalAmount'>
+                        <h3>Count of unpaid orders total amount</h3>
+                        <h2>{sumOfTotalPendingPayments}</h2>
+                        </div>"
+            );
 
             page.WriteLine("</body></html>");
             page.Close();
