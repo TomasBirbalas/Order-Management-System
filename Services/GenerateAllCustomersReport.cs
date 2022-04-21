@@ -18,7 +18,7 @@ namespace Services
         {
             StreamWriter page = new StreamWriter(fileName);
             // Create html-document
-            page.WriteLine("<!DOCTYPE html><html><head><style>body{font-family:sans-serif;margin:0;padding:0}h1{text-align:center}h2,h3,h4,p{margin:0;line-height:1.5}.container{display:block;width:960px;margin:0 auto}.client-row{display:flex;border:1px solid #bdbdbd}.client-detail-block{display:flex;flex-direction:column;padding:32px;justify-content:center}.orders-block{flex:1}.order{display:flex;flex:1;background-color:#f6f6f6;margin-bottom:8px}.order:last-child{margin-bottom:0}.order div{flex:1;padding:16px 16px}.order div:last-child{flex:1;max-width:20px;background-color:red;padding:0}.total-order-details{display:flex}.total-order-details div{flex:1}.clients{display:flex}.clients div{flex:1;margin:0 32px;border-bottom:10px solid green}.clients div:first-child{margin-left:0}.clients div:last-child{margin-right:0}.best-clients .client-detail-block{text-align:center;background-color:#f6f6f6}</style></head><body>");
+            page.WriteLine("<!DOCTYPE html><html><head><style>body{font-family:sans-serif;margin:0;padding:0}h1{text-align:center}h2,h3,h4,p{margin:0;line-height:1.5}p{font-size:14px}.container{display:block;width:1240px;margin:0 auto}.client-row{display:flex;margin:16px 0;border:1px solid #bdbdbd}.client-detail-block{display:flex;flex-direction:column;padding:32px;justify-content:center}.orders-block{flex:1}.order{display:flex;flex:1;background-color:#f6f6f6;margin-bottom:8px}.order:last-child{margin-bottom:0}.order div{flex:1;padding:16px 16px}.order div:last-child{flex:1;max-width:20px;padding:0}.Completed{background-color:green}.Pending_payment{background-color:red}.total-order-details{display:flex}.total-order-details div{flex:1}.clients{display:flex}.clients div{flex:1;margin:0 32px;border-bottom:10px solid green}.clients div:first-child{margin-left:0}.clients div:last-child{margin-right:0}.best-clients .client-detail-block{text-align:center;background-color:#f6f6f6}</style></head><body>");
             page.WriteLine("<div class='container'>");
             page.WriteLine($"<h1 style='text-align: center;'>All clients report {DateTime.Now}</h1>");
 
@@ -26,21 +26,17 @@ namespace Services
             clientOrders = clientOrderRepo.RetrieveClientOrderList();
 
             List<Order> allOrdersOfClient = new List<Order>();
-            List<Order> pendingPaymentOrders = new List<Order>();
-            List<Order> completedOrders = new List<Order>();
-
-            string result = "";
-            decimal sumOfTotalPendingPayments = 0;
 
             var listOfTotal = new List<decimal> { };
             foreach (var client in clientOrders)
             {
+                List<Order> pendingPaymentOrders = new List<Order>();
+                List<Order> completedOrders = new List<Order>();
+
                 page.WriteLine("<div class='client-row'>");
                 page.WriteLine("<div class='client-detail-block'>");
 
                 allOrdersOfClient = client.OrderList;
-                pendingPaymentOrders = client.OrderList.FindAll(order => order.OrderStatus == "Pending_payment");
-                completedOrders = client.OrderList.FindAll(order => order.OrderStatus == "Completed");
 
                 page.WriteLine(@$"
                     <h2>{client.Client.BusinessName}</h2>
@@ -56,24 +52,16 @@ namespace Services
                     <div class='order-list'>"
                 );
 
-                decimal sumOfCurrentOrder = 0;
-                decimal sumOfAllOrders = 0;
-
-                var totalnumbers = new List<decimal> { };
-
                 allOrdersOfClient.ForEach(order =>
                 {
                     var numbers = new List<decimal> { };
-
-
-                    order.OrderProducts.ForEach(product =>
+                    if(order.OrderStatus == "Completed")
                     {
-                        decimal currentPrice = product.Product.CurrentPrice;
-                        int quantity = product.Quantity;
-                        decimal total = currentPrice * quantity;
-                        numbers.Add(total);
-                    });
-                    sumOfCurrentOrder = numbers.Sum();
+                        completedOrders.Add(order);
+                    }else
+                    {
+                        pendingPaymentOrders.Add(order);
+                    }
 
                     page.WriteLine($@"
                     <div class='order'>
@@ -87,56 +75,57 @@ namespace Services
                         </div>
                         <div>
                             <h4>Order Total</h4>
-                            <p>{sumOfCurrentOrder} Eur</p>
+                            <p>{order.OrderTotalAmount} Eur</p>
                         </div>
-                        <div class='status'>
+                        <div>
+                            <h4>Order Status</h4>
+                            <p>{order.OrderStatus}</p>
+                        </div>
+                        <div class='{order.OrderStatus}'>
                         </div>
                     </div>
                     ");
-
-                    totalnumbers.Add(sumOfCurrentOrder);
-                    sumOfAllOrders = totalnumbers.Sum();
                 });
+
+                decimal completedOrdersTotalAmount = completedOrders.Sum(order => order.OrderTotalAmount);
+                decimal pendingPaymentOrdersTotalAmount = pendingPaymentOrders.Sum(order => order.OrderTotalAmount);
+
                 page.WriteLine("</div>");
                 page.WriteLine("<div class='total-order-details'>");
                     page.WriteLine("<div class='pending-orders'>");
-                        page.WriteLine("<h4>Total pending Orders Sum</h4>");
-                        page.WriteLine("<h3>2500.00 Eur</h3>");
+                        page.WriteLine("<h4>Completed Orders Sum</h4>");
+                        page.WriteLine($"<h3>{completedOrdersTotalAmount} Eur</h3>");
                     page.WriteLine("</div>");
                     page.WriteLine("<div class='pending-orders'>");
                         page.WriteLine("<h4>Total pending Orders Sum</h4>");
-                        page.WriteLine("<h3>2500.00 Eur</h3>");
+                        page.WriteLine($"<h3>{pendingPaymentOrdersTotalAmount} Eur</h3>");
                     page.WriteLine("</div>");
                 page.WriteLine("</div>");
                 page.WriteLine("</div>");
                 page.WriteLine("</div>");
 
-                listOfTotal.Add(sumOfAllOrders);
-
-                string danger = pendingPaymentOrders.Count > 2 || sumOfAllOrders > 2000 ? "Red" : "Green";
-
             }
+            List<ClientOrder> sortedClients = clientOrders.OrderBy(listOfClientsOrder => listOfClientsOrder.OrderList.Where(order => order.OrderStatus == "Completed").Sum(order => order.OrderTotalAmount)).ToList();
+
+            page.WriteLine("<div class='best-clients'><h1>Best Clients</h1><div class='clients'>");
 
 
-            page.WriteLine("<div class='best-clients'>");
-            page.WriteLine("<h1>Best Clients</h1>");
-            page.WriteLine("<div class='clients'>");
-            page.WriteLine("<div class='client-detail-block'>");
-            page.WriteLine("<h2>UAB tralialia</h2>");
-            page.WriteLine("<span>Vat number: 0000</span>");
-            page.WriteLine("<span>Company code: 0000</span>");
-            page.WriteLine("<span>Address: 0000</span>");
-            page.WriteLine("</div>");
-            page.WriteLine("<div class='client-detail-block'>");
-            page.WriteLine("<h2>UAB tralialia</h2>");
-            page.WriteLine("<span>Vat number: 0000</span>");
-            page.WriteLine("<span>Company code: 0000</span>");
-            page.WriteLine("<span>Address: 0000</span>");
-            page.WriteLine("</div>");
-            page.WriteLine("</div>");
-            page.WriteLine("</div>");
-            sumOfTotalPendingPayments = listOfTotal.Sum();
-
+            for (int i = sortedClients.Count -1 ; i > sortedClients.Count - 4; i--)
+            {
+                page.WriteLine($@"
+                <div class='client-detail-block'>
+                    <h2>{sortedClients[i].Client.BusinessName}</h2>
+                    <span>Vat number: {sortedClients[i].Client.VatNumber}</span>
+                    <span>Company code: {sortedClients[i].Client.BusinessCode}</span>
+                    <span>Address:</span>
+                    <span>{sortedClients[i].Client.BusinessAddress.Street}</span>
+                    <span>{sortedClients[i].Client.BusinessAddress.City}</span>
+                    <span>{sortedClients[i].Client.BusinessAddress.PostalCode}</span>
+                    <span>{sortedClients[i].Client.BusinessAddress.Country}</span>
+                </div>
+                ");
+            }
+            page.WriteLine("</div></div>");
             page.WriteLine("</div></body></html>");
             page.Close();
         }
