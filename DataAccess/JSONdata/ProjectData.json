@@ -6,13 +6,13 @@
       "BusinessCode": 800000000,
       "VatNumber": "LT100000000000",
       "BusinessAddress": {
-        "Street": "Gatve-7",
+        "Street": "Gatve-4",
         "City": "Kaunas",
         "PostalCode": 90000,
         "Country": "Lietuva"
       },
       "ShippingAddress": {
-        "Street": "Gatve-5",
+        "Street": "Gatve-4",
         "City": "Kaunas",
         "PostalCode": 90000,
         "Country": "Lietuva"
@@ -21,196 +21,194 @@
     "OrderList": [
       {
         "Id": 202200000,
-        "OrderDate": "2022-02-11T06:07:20",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100014,
-              "Name": "Preke-14",
-              "CurrentPrice": 15.86
-            },
-            "Quantity": 17
-          },
-          {
-            "Product": {
-              "Id": 100012,
-              "Name": "Preke-12",
-              "CurrentPrice": 25.90
-            },
-            "Quantity": 15
-          },
-          {
-            "Product": {
-              "Id": 100005,
-              "Name": "Preke-5",
-              "CurrentPrice": 23.26
-            },
-            "Quantity": 15
-          },
-          {
-            "Product": {
-              "Id": 100009,
-              "Name": "Preke-9",
-              "CurrentPrice": 21.51
-            },
-            "Quantity": 14
-          }
-        ],
-        "OrderStatus": "Completed"
-      },
-      {
-        "Id": 202200001,
-        "OrderDate": "2022-01-31T18:44:17",
+        "OrderDate": "2022-01-22T22:14:24",
         "OrderProducts": [
           {
             "Product": {
               "Id": 100010,
               "Name": "Preke-10",
-              "CurrentPrice": 13.17
+              "CurrentPrice": 37.96
             },
-            "Quantity": 9
+            "Quantity": 16
           },
+          {
+            "Product": {
+              "Id": 100002,
+              "Name": "Preke-2",
+              "CurrentPrice": 47.52
+            },
+            "Quantity": 6
+          }
+        ],
+        "OrderTotalAmount": 892.48,
+        "OrderStatus": "Completed"
+      },
+      {
+        "Id": 202200001,
+        "OrderDate": "2022-04-01T23:16:45",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100003,
+              "Name": "Preke-3",
+              "CurrentPrice": 42.33
+            },
+            "Quantity": 7
+          }
+        ],
+        "OrderTotalAmount": 296.31,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202200002,
+        "OrderDate": "2022-01-10T21:10:35",
+        "OrderProducts": [
           {
             "Product": {
               "Id": 100007,
               "Name": "Preke-7",
-              "CurrentPrice": 12.18
+              "CurrentPrice": 21.34
             },
-            "Quantity": 7
-          },
-          {
-            "Product": {
-              "Id": 100011,
-              "Name": "Preke-11",
-              "CurrentPrice": 33.80
-            },
-            "Quantity": 3
-          },
-          {
-            "Product": {
-              "Id": 100012,
-              "Name": "Preke-12",
-              "CurrentPrice": 13.83
-            },
-            "Quantity": 3
+            "Quantity": 1
           },
           {
             "Product": {
               "Id": 100013,
               "Name": "Preke-13",
-              "CurrentPrice": 14.46
-            },
-            "Quantity": 18
-          }
-        ],
-        "OrderStatus": "Completed"
-      },
-      {
-        "Id": 202200002,
-        "OrderDate": "2022-03-29T12:40:22",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100010,
-              "Name": "Preke-10",
-              "CurrentPrice": 4.70
-            },
-            "Quantity": 9
-          }
-        ],
-        "OrderStatus": "Pending_payment"
-      },
-      {
-        "Id": 202200003,
-        "OrderDate": "2022-01-01T18:16:28",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100007,
-              "Name": "Preke-7",
-              "CurrentPrice": 30.56
+              "CurrentPrice": 12.86
             },
             "Quantity": 13
           },
           {
             "Product": {
-              "Id": 100009,
-              "Name": "Preke-9",
-              "CurrentPrice": 44.08
-            },
-            "Quantity": 4
-          },
-          {
-            "Product": {
               "Id": 100003,
               "Name": "Preke-3",
-              "CurrentPrice": 3.50
-            },
-            "Quantity": 15
-          },
-          {
-            "Product": {
-              "Id": 100011,
-              "Name": "Preke-11",
-              "CurrentPrice": 19.39
+              "CurrentPrice": 14.22
             },
             "Quantity": 6
           },
           {
             "Product": {
-              "Id": 100004,
-              "Name": "Preke-4",
-              "CurrentPrice": 7.67
-            },
-            "Quantity": 5
-          }
-        ],
-        "OrderStatus": "Pending_payment"
-      },
-      {
-        "Id": 202200004,
-        "OrderDate": "2022-03-17T23:53:19",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100006,
-              "Name": "Preke-6",
-              "CurrentPrice": 22.37
-            },
-            "Quantity": 7
-          },
-          {
-            "Product": {
-              "Id": 100003,
-              "Name": "Preke-3",
-              "CurrentPrice": 28.15
+              "Id": 100005,
+              "Name": "Preke-5",
+              "CurrentPrice": 45.58
             },
             "Quantity": 15
           }
         ],
+        "OrderTotalAmount": 957.54,
         "OrderStatus": "Pending_payment"
       },
       {
-        "Id": 202200005,
-        "OrderDate": "2022-03-06T08:05:24",
+        "Id": 202200003,
+        "OrderDate": "2022-02-15T14:31:33",
         "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100005,
+              "Name": "Preke-5",
+              "CurrentPrice": 5.65
+            },
+            "Quantity": 11
+          },
+          {
+            "Product": {
+              "Id": 100010,
+              "Name": "Preke-10",
+              "CurrentPrice": 13.02
+            },
+            "Quantity": 10
+          },
+          {
+            "Product": {
+              "Id": 100011,
+              "Name": "Preke-11",
+              "CurrentPrice": 33.85
+            },
+            "Quantity": 17
+          },
+          {
+            "Product": {
+              "Id": 100006,
+              "Name": "Preke-6",
+              "CurrentPrice": 43.97
+            },
+            "Quantity": 4
+          },
+          {
+            "Product": {
+              "Id": 100004,
+              "Name": "Preke-4",
+              "CurrentPrice": 11.20
+            },
+            "Quantity": 15
+          }
+        ],
+        "OrderTotalAmount": 1111.68,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202200004,
+        "OrderDate": "2022-03-14T20:27:59",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100008,
+              "Name": "Preke-8",
+              "CurrentPrice": 25.83
+            },
+            "Quantity": 17
+          },
+          {
+            "Product": {
+              "Id": 100010,
+              "Name": "Preke-10",
+              "CurrentPrice": 23.76
+            },
+            "Quantity": 15
+          },
+          {
+            "Product": {
+              "Id": 100007,
+              "Name": "Preke-7",
+              "CurrentPrice": 33.29
+            },
+            "Quantity": 15
+          }
+        ],
+        "OrderTotalAmount": 1294.86,
+        "OrderStatus": "Completed"
+      },
+      {
+        "Id": 202200005,
+        "OrderDate": "2022-03-10T18:14:12",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100001,
+              "Name": "Preke-1",
+              "CurrentPrice": 11.20
+            },
+            "Quantity": 4
+          },
           {
             "Product": {
               "Id": 100013,
               "Name": "Preke-13",
-              "CurrentPrice": 18.00
+              "CurrentPrice": 5.88
             },
-            "Quantity": 7
+            "Quantity": 9
           },
           {
             "Product": {
-              "Id": 100003,
-              "Name": "Preke-3",
-              "CurrentPrice": 40.97
+              "Id": 100011,
+              "Name": "Preke-11",
+              "CurrentPrice": 8.37
             },
-            "Quantity": 14
+            "Quantity": 15
           }
         ],
+        "OrderTotalAmount": 223.27,
         "OrderStatus": "Completed"
       }
     ]
@@ -222,13 +220,13 @@
       "BusinessCode": 800000001,
       "VatNumber": "LT100000000001",
       "BusinessAddress": {
-        "Street": "Gatve-7",
+        "Street": "Gatve-8",
         "City": "Kaunas",
         "PostalCode": 90000,
         "Country": "Lietuva"
       },
       "ShippingAddress": {
-        "Street": "Gatve-5",
+        "Street": "Gatve-4",
         "City": "Kaunas",
         "PostalCode": 90000,
         "Country": "Lietuva"
@@ -237,119 +235,211 @@
     "OrderList": [
       {
         "Id": 202201000,
-        "OrderDate": "2022-02-20T02:08:55",
+        "OrderDate": "2022-04-04T04:30:17",
         "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100006,
-              "Name": "Preke-6",
-              "CurrentPrice": 3.26
-            },
-            "Quantity": 3
-          },
-          {
-            "Product": {
-              "Id": 100012,
-              "Name": "Preke-12",
-              "CurrentPrice": 7.57
-            },
-            "Quantity": 13
-          }
-        ],
-        "OrderStatus": "Pending_payment"
-      },
-      {
-        "Id": 202201001,
-        "OrderDate": "2022-02-13T22:38:05",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100004,
-              "Name": "Preke-4",
-              "CurrentPrice": 39.90
-            },
-            "Quantity": 19
-          },
-          {
-            "Product": {
-              "Id": 100013,
-              "Name": "Preke-13",
-              "CurrentPrice": 9.50
-            },
-            "Quantity": 19
-          },
-          {
-            "Product": {
-              "Id": 100002,
-              "Name": "Preke-2",
-              "CurrentPrice": 36.41
-            },
-            "Quantity": 12
-          }
-        ],
-        "OrderStatus": "Pending_payment"
-      },
-      {
-        "Id": 202201002,
-        "OrderDate": "2022-01-29T06:23:06",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100009,
-              "Name": "Preke-9",
-              "CurrentPrice": 0.70
-            },
-            "Quantity": 3
-          },
-          {
-            "Product": {
-              "Id": 100005,
-              "Name": "Preke-5",
-              "CurrentPrice": 4.08
-            },
-            "Quantity": 6
-          },
           {
             "Product": {
               "Id": 100001,
               "Name": "Preke-1",
-              "CurrentPrice": 33.43
+              "CurrentPrice": 41.88
             },
-            "Quantity": 14
+            "Quantity": 3
+          },
+          {
+            "Product": {
+              "Id": 100004,
+              "Name": "Preke-4",
+              "CurrentPrice": 31.83
+            },
+            "Quantity": 13
+          },
+          {
+            "Product": {
+              "Id": 100003,
+              "Name": "Preke-3",
+              "CurrentPrice": 32.90
+            },
+            "Quantity": 3
           },
           {
             "Product": {
               "Id": 100007,
               "Name": "Preke-7",
-              "CurrentPrice": 13.49
+              "CurrentPrice": 8.69
             },
-            "Quantity": 8
+            "Quantity": 14
+          },
+          {
+            "Product": {
+              "Id": 100011,
+              "Name": "Preke-11",
+              "CurrentPrice": 34.11
+            },
+            "Quantity": 12
           }
         ],
+        "OrderTotalAmount": 1169.11,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202201001,
+        "OrderDate": "2022-02-10T06:56:01",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100006,
+              "Name": "Preke-6",
+              "CurrentPrice": 36.67
+            },
+            "Quantity": 4
+          },
+          {
+            "Product": {
+              "Id": 100007,
+              "Name": "Preke-7",
+              "CurrentPrice": 3.18
+            },
+            "Quantity": 2
+          },
+          {
+            "Product": {
+              "Id": 100013,
+              "Name": "Preke-13",
+              "CurrentPrice": 34.51
+            },
+            "Quantity": 4
+          }
+        ],
+        "OrderTotalAmount": 291.08,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202201002,
+        "OrderDate": "2022-03-11T09:49:53",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100011,
+              "Name": "Preke-11",
+              "CurrentPrice": 30.02
+            },
+            "Quantity": 9
+          },
+          {
+            "Product": {
+              "Id": 100009,
+              "Name": "Preke-9",
+              "CurrentPrice": 41.20
+            },
+            "Quantity": 6
+          }
+        ],
+        "OrderTotalAmount": 517.38,
         "OrderStatus": "Completed"
       },
       {
         "Id": 202201003,
-        "OrderDate": "2022-03-05T20:27:49",
+        "OrderDate": "2022-04-16T15:06:35",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100005,
+              "Name": "Preke-5",
+              "CurrentPrice": 37.21
+            },
+            "Quantity": 15
+          },
+          {
+            "Product": {
+              "Id": 100002,
+              "Name": "Preke-2",
+              "CurrentPrice": 40.46
+            },
+            "Quantity": 16
+          },
+          {
+            "Product": {
+              "Id": 100013,
+              "Name": "Preke-13",
+              "CurrentPrice": 37.01
+            },
+            "Quantity": 11
+          },
+          {
+            "Product": {
+              "Id": 100011,
+              "Name": "Preke-11",
+              "CurrentPrice": 32.98
+            },
+            "Quantity": 15
+          },
+          {
+            "Product": {
+              "Id": 100006,
+              "Name": "Preke-6",
+              "CurrentPrice": 27.84
+            },
+            "Quantity": 18
+          }
+        ],
+        "OrderTotalAmount": 2608.44,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202201004,
+        "OrderDate": "2022-04-15T15:16:27",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100006,
+              "Name": "Preke-6",
+              "CurrentPrice": 33.28
+            },
+            "Quantity": 16
+          },
+          {
+            "Product": {
+              "Id": 100014,
+              "Name": "Preke-14",
+              "CurrentPrice": 11.97
+            },
+            "Quantity": 11
+          },
+          {
+            "Product": {
+              "Id": 100007,
+              "Name": "Preke-7",
+              "CurrentPrice": 38.69
+            },
+            "Quantity": 17
+          }
+        ],
+        "OrderTotalAmount": 1321.88,
+        "OrderStatus": "Completed"
+      },
+      {
+        "Id": 202201005,
+        "OrderDate": "2022-01-10T10:18:57",
         "OrderProducts": [
           {
             "Product": {
               "Id": 100003,
               "Name": "Preke-3",
-              "CurrentPrice": 0.00
+              "CurrentPrice": 12.43
             },
-            "Quantity": 7
+            "Quantity": 19
           },
           {
             "Product": {
-              "Id": 100001,
-              "Name": "Preke-1",
-              "CurrentPrice": 30.71
+              "Id": 100004,
+              "Name": "Preke-4",
+              "CurrentPrice": 24.52
             },
-            "Quantity": 11
+            "Quantity": 4
           }
         ],
-        "OrderStatus": "Pending_payment"
+        "OrderTotalAmount": 334.25,
+        "OrderStatus": "Completed"
       }
     ]
   },
@@ -359,6 +449,450 @@
       "BusinessName": "UAB Company-2",
       "BusinessCode": 800000002,
       "VatNumber": "LT100000000002",
+      "BusinessAddress": {
+        "Street": "Gatve-9",
+        "City": "Kaunas",
+        "PostalCode": 90000,
+        "Country": "Lietuva"
+      },
+      "ShippingAddress": {
+        "Street": "Gatve-1",
+        "City": "Kaunas",
+        "PostalCode": 90000,
+        "Country": "Lietuva"
+      }
+    },
+    "OrderList": [
+      {
+        "Id": 202202000,
+        "OrderDate": "2022-04-01T08:44:32",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100008,
+              "Name": "Preke-8",
+              "CurrentPrice": 39.45
+            },
+            "Quantity": 15
+          },
+          {
+            "Product": {
+              "Id": 100014,
+              "Name": "Preke-14",
+              "CurrentPrice": 45.62
+            },
+            "Quantity": 13
+          },
+          {
+            "Product": {
+              "Id": 100005,
+              "Name": "Preke-5",
+              "CurrentPrice": 26.33
+            },
+            "Quantity": 11
+          },
+          {
+            "Product": {
+              "Id": 100010,
+              "Name": "Preke-10",
+              "CurrentPrice": 12.61
+            },
+            "Quantity": 13
+          },
+          {
+            "Product": {
+              "Id": 100011,
+              "Name": "Preke-11",
+              "CurrentPrice": 17.93
+            },
+            "Quantity": 11
+          }
+        ],
+        "OrderTotalAmount": 1835.60,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202202001,
+        "OrderDate": "2022-01-01T15:22:26",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100014,
+              "Name": "Preke-14",
+              "CurrentPrice": 4.09
+            },
+            "Quantity": 5
+          }
+        ],
+        "OrderTotalAmount": 20.45,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202202002,
+        "OrderDate": "2022-03-16T00:33:37",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100004,
+              "Name": "Preke-4",
+              "CurrentPrice": 46.51
+            },
+            "Quantity": 16
+          },
+          {
+            "Product": {
+              "Id": 100013,
+              "Name": "Preke-13",
+              "CurrentPrice": 12.77
+            },
+            "Quantity": 17
+          },
+          {
+            "Product": {
+              "Id": 100001,
+              "Name": "Preke-1",
+              "CurrentPrice": 11.77
+            },
+            "Quantity": 1
+          },
+          {
+            "Product": {
+              "Id": 100003,
+              "Name": "Preke-3",
+              "CurrentPrice": 11.39
+            },
+            "Quantity": 6
+          }
+        ],
+        "OrderTotalAmount": 1041.36,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202202003,
+        "OrderDate": "2022-02-24T23:23:49",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100006,
+              "Name": "Preke-6",
+              "CurrentPrice": 39.57
+            },
+            "Quantity": 18
+          },
+          {
+            "Product": {
+              "Id": 100012,
+              "Name": "Preke-12",
+              "CurrentPrice": 33.97
+            },
+            "Quantity": 8
+          },
+          {
+            "Product": {
+              "Id": 100008,
+              "Name": "Preke-8",
+              "CurrentPrice": 46.03
+            },
+            "Quantity": 8
+          }
+        ],
+        "OrderTotalAmount": 1352.26,
+        "OrderStatus": "Completed"
+      },
+      {
+        "Id": 202202004,
+        "OrderDate": "2022-04-14T03:58:01",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100009,
+              "Name": "Preke-9",
+              "CurrentPrice": 7.91
+            },
+            "Quantity": 12
+          },
+          {
+            "Product": {
+              "Id": 100002,
+              "Name": "Preke-2",
+              "CurrentPrice": 8.80
+            },
+            "Quantity": 13
+          },
+          {
+            "Product": {
+              "Id": 100005,
+              "Name": "Preke-5",
+              "CurrentPrice": 27.33
+            },
+            "Quantity": 6
+          },
+          {
+            "Product": {
+              "Id": 100013,
+              "Name": "Preke-13",
+              "CurrentPrice": 4.62
+            },
+            "Quantity": 16
+          }
+        ],
+        "OrderTotalAmount": 447.22,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202202005,
+        "OrderDate": "2022-03-27T15:36:01",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100006,
+              "Name": "Preke-6",
+              "CurrentPrice": 5.31
+            },
+            "Quantity": 9
+          },
+          {
+            "Product": {
+              "Id": 100010,
+              "Name": "Preke-10",
+              "CurrentPrice": 39.57
+            },
+            "Quantity": 15
+          },
+          {
+            "Product": {
+              "Id": 100004,
+              "Name": "Preke-4",
+              "CurrentPrice": 31.44
+            },
+            "Quantity": 3
+          },
+          {
+            "Product": {
+              "Id": 100005,
+              "Name": "Preke-5",
+              "CurrentPrice": 8.68
+            },
+            "Quantity": 9
+          },
+          {
+            "Product": {
+              "Id": 100003,
+              "Name": "Preke-3",
+              "CurrentPrice": 4.36
+            },
+            "Quantity": 17
+          }
+        ],
+        "OrderTotalAmount": 887.90,
+        "OrderStatus": "Completed"
+      }
+    ]
+  },
+  {
+    "Client": {
+      "Id": 3,
+      "BusinessName": "UAB Company-3",
+      "BusinessCode": 800000003,
+      "VatNumber": "LT100000000003",
+      "BusinessAddress": {
+        "Street": "Gatve-5",
+        "City": "Kaunas",
+        "PostalCode": 90000,
+        "Country": "Lietuva"
+      },
+      "ShippingAddress": {
+        "Street": "Gatve-7",
+        "City": "Kaunas",
+        "PostalCode": 90000,
+        "Country": "Lietuva"
+      }
+    },
+    "OrderList": [
+      {
+        "Id": 202203000,
+        "OrderDate": "2022-03-25T20:02:57",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100014,
+              "Name": "Preke-14",
+              "CurrentPrice": 27.00
+            },
+            "Quantity": 13
+          },
+          {
+            "Product": {
+              "Id": 100008,
+              "Name": "Preke-8",
+              "CurrentPrice": 34.68
+            },
+            "Quantity": 16
+          },
+          {
+            "Product": {
+              "Id": 100009,
+              "Name": "Preke-9",
+              "CurrentPrice": 17.99
+            },
+            "Quantity": 8
+          },
+          {
+            "Product": {
+              "Id": 100002,
+              "Name": "Preke-2",
+              "CurrentPrice": 1.51
+            },
+            "Quantity": 1
+          },
+          {
+            "Product": {
+              "Id": 100010,
+              "Name": "Preke-10",
+              "CurrentPrice": 17.55
+            },
+            "Quantity": 9
+          },
+          {
+            "Product": {
+              "Id": 100012,
+              "Name": "Preke-12",
+              "CurrentPrice": 39.74
+            },
+            "Quantity": 6
+          }
+        ],
+        "OrderTotalAmount": 1447.70,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202203001,
+        "OrderDate": "2022-02-23T18:07:25",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100002,
+              "Name": "Preke-2",
+              "CurrentPrice": 48.79
+            },
+            "Quantity": 4
+          }
+        ],
+        "OrderTotalAmount": 195.16,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202203002,
+        "OrderDate": "2022-04-09T13:28:01",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100014,
+              "Name": "Preke-14",
+              "CurrentPrice": 33.63
+            },
+            "Quantity": 4
+          }
+        ],
+        "OrderTotalAmount": 134.52,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202203003,
+        "OrderDate": "2022-02-27T09:01:58",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100013,
+              "Name": "Preke-13",
+              "CurrentPrice": 44.91
+            },
+            "Quantity": 5
+          },
+          {
+            "Product": {
+              "Id": 100001,
+              "Name": "Preke-1",
+              "CurrentPrice": 27.12
+            },
+            "Quantity": 11
+          }
+        ],
+        "OrderTotalAmount": 522.87,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202203004,
+        "OrderDate": "2022-01-02T09:12:56",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100010,
+              "Name": "Preke-10",
+              "CurrentPrice": 3.65
+            },
+            "Quantity": 19
+          },
+          {
+            "Product": {
+              "Id": 100006,
+              "Name": "Preke-6",
+              "CurrentPrice": 9.08
+            },
+            "Quantity": 9
+          },
+          {
+            "Product": {
+              "Id": 100013,
+              "Name": "Preke-13",
+              "CurrentPrice": 42.83
+            },
+            "Quantity": 18
+          }
+        ],
+        "OrderTotalAmount": 922.01,
+        "OrderStatus": "Completed"
+      },
+      {
+        "Id": 202203005,
+        "OrderDate": "2022-01-09T11:06:57",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100008,
+              "Name": "Preke-8",
+              "CurrentPrice": 0.68
+            },
+            "Quantity": 18
+          },
+          {
+            "Product": {
+              "Id": 100002,
+              "Name": "Preke-2",
+              "CurrentPrice": 48.48
+            },
+            "Quantity": 11
+          },
+          {
+            "Product": {
+              "Id": 100005,
+              "Name": "Preke-5",
+              "CurrentPrice": 46.69
+            },
+            "Quantity": 8
+          }
+        ],
+        "OrderTotalAmount": 919.04,
+        "OrderStatus": "Completed"
+      }
+    ]
+  },
+  {
+    "Client": {
+      "Id": 4,
+      "BusinessName": "UAB Company-4",
+      "BusinessCode": 800000004,
+      "VatNumber": "LT100000000004",
       "BusinessAddress": {
         "Street": "Gatve-8",
         "City": "Kaunas",
@@ -374,562 +908,284 @@
     },
     "OrderList": [
       {
-        "Id": 202202000,
-        "OrderDate": "2022-01-29T14:26:42",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100013,
-              "Name": "Preke-13",
-              "CurrentPrice": 26.09
-            },
-            "Quantity": 18
-          },
-          {
-            "Product": {
-              "Id": 100008,
-              "Name": "Preke-8",
-              "CurrentPrice": 39.89
-            },
-            "Quantity": 3
-          }
-        ],
-        "OrderStatus": "Completed"
-      },
-      {
-        "Id": 202202001,
-        "OrderDate": "2022-01-18T04:46:12",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100004,
-              "Name": "Preke-4",
-              "CurrentPrice": 13.56
-            },
-            "Quantity": 3
-          },
-          {
-            "Product": {
-              "Id": 100013,
-              "Name": "Preke-13",
-              "CurrentPrice": 33.71
-            },
-            "Quantity": 3
-          },
-          {
-            "Product": {
-              "Id": 100014,
-              "Name": "Preke-14",
-              "CurrentPrice": 33.56
-            },
-            "Quantity": 3
-          },
-          {
-            "Product": {
-              "Id": 100002,
-              "Name": "Preke-2",
-              "CurrentPrice": 24.55
-            },
-            "Quantity": 11
-          },
-          {
-            "Product": {
-              "Id": 100011,
-              "Name": "Preke-11",
-              "CurrentPrice": 24.63
-            },
-            "Quantity": 15
-          }
-        ],
-        "OrderStatus": "Completed"
-      },
-      {
-        "Id": 202202002,
-        "OrderDate": "2022-04-11T13:43:15",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100011,
-              "Name": "Preke-11",
-              "CurrentPrice": 25.78
-            },
-            "Quantity": 2
-          },
-          {
-            "Product": {
-              "Id": 100014,
-              "Name": "Preke-14",
-              "CurrentPrice": 8.62
-            },
-            "Quantity": 9
-          },
-          {
-            "Product": {
-              "Id": 100008,
-              "Name": "Preke-8",
-              "CurrentPrice": 30.94
-            },
-            "Quantity": 7
-          }
-        ],
-        "OrderStatus": "Completed"
-      },
-      {
-        "Id": 202202003,
-        "OrderDate": "2022-01-05T02:37:02",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100007,
-              "Name": "Preke-7",
-              "CurrentPrice": 46.60
-            },
-            "Quantity": 16
-          },
-          {
-            "Product": {
-              "Id": 100001,
-              "Name": "Preke-1",
-              "CurrentPrice": 23.82
-            },
-            "Quantity": 1
-          },
-          {
-            "Product": {
-              "Id": 100013,
-              "Name": "Preke-13",
-              "CurrentPrice": 48.73
-            },
-            "Quantity": 12
-          },
-          {
-            "Product": {
-              "Id": 100005,
-              "Name": "Preke-5",
-              "CurrentPrice": 42.51
-            },
-            "Quantity": 5
-          },
-          {
-            "Product": {
-              "Id": 100009,
-              "Name": "Preke-9",
-              "CurrentPrice": 30.59
-            },
-            "Quantity": 6
-          },
-          {
-            "Product": {
-              "Id": 100010,
-              "Name": "Preke-10",
-              "CurrentPrice": 27.30
-            },
-            "Quantity": 15
-          }
-        ],
-        "OrderStatus": "Pending_payment"
-      },
-      {
-        "Id": 202202004,
-        "OrderDate": "2022-01-22T17:53:09",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100002,
-              "Name": "Preke-2",
-              "CurrentPrice": 43.88
-            },
-            "Quantity": 5
-          },
-          {
-            "Product": {
-              "Id": 100010,
-              "Name": "Preke-10",
-              "CurrentPrice": 12.91
-            },
-            "Quantity": 12
-          },
-          {
-            "Product": {
-              "Id": 100013,
-              "Name": "Preke-13",
-              "CurrentPrice": 34.91
-            },
-            "Quantity": 8
-          },
-          {
-            "Product": {
-              "Id": 100001,
-              "Name": "Preke-1",
-              "CurrentPrice": 20.85
-            },
-            "Quantity": 13
-          }
-        ],
-        "OrderStatus": "Pending_payment"
-      }
-    ]
-  },
-  {
-    "Client": {
-      "Id": 3,
-      "BusinessName": "UAB Company-3",
-      "BusinessCode": 800000003,
-      "VatNumber": "LT100000000003",
-      "BusinessAddress": {
-        "Street": "Gatve-2",
-        "City": "Kaunas",
-        "PostalCode": 90000,
-        "Country": "Lietuva"
-      },
-      "ShippingAddress": {
-        "Street": "Gatve-7",
-        "City": "Kaunas",
-        "PostalCode": 90000,
-        "Country": "Lietuva"
-      }
-    },
-    "OrderList": [
-      {
-        "Id": 202203000,
-        "OrderDate": "2022-03-10T19:54:52",
+        "Id": 202204000,
+        "OrderDate": "2022-01-31T10:31:55",
         "OrderProducts": [
           {
             "Product": {
               "Id": 100009,
               "Name": "Preke-9",
-              "CurrentPrice": 4.19
+              "CurrentPrice": 30.84
             },
-            "Quantity": 1
+            "Quantity": 3
           },
-          {
-            "Product": {
-              "Id": 100001,
-              "Name": "Preke-1",
-              "CurrentPrice": 30.03
-            },
-            "Quantity": 13
-          },
-          {
-            "Product": {
-              "Id": 100006,
-              "Name": "Preke-6",
-              "CurrentPrice": 36.96
-            },
-            "Quantity": 17
-          }
-        ],
-        "OrderStatus": "Pending_payment"
-      },
-      {
-        "Id": 202203001,
-        "OrderDate": "2022-04-04T13:06:43",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100007,
-              "Name": "Preke-7",
-              "CurrentPrice": 48.18
-            },
-            "Quantity": 18
-          },
-          {
-            "Product": {
-              "Id": 100001,
-              "Name": "Preke-1",
-              "CurrentPrice": 27.16
-            },
-            "Quantity": 7
-          },
-          {
-            "Product": {
-              "Id": 100013,
-              "Name": "Preke-13",
-              "CurrentPrice": 35.40
-            },
-            "Quantity": 12
-          }
-        ],
-        "OrderStatus": "Completed"
-      },
-      {
-        "Id": 202203002,
-        "OrderDate": "2022-02-09T03:53:51",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100002,
-              "Name": "Preke-2",
-              "CurrentPrice": 3.84
-            },
-            "Quantity": 2
-          },
-          {
-            "Product": {
-              "Id": 100003,
-              "Name": "Preke-3",
-              "CurrentPrice": 17.15
-            },
-            "Quantity": 5
-          }
-        ],
-        "OrderStatus": "Pending_payment"
-      },
-      {
-        "Id": 202203003,
-        "OrderDate": "2022-02-25T01:03:57",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100008,
-              "Name": "Preke-8",
-              "CurrentPrice": 8.27
-            },
-            "Quantity": 17
-          },
-          {
-            "Product": {
-              "Id": 100007,
-              "Name": "Preke-7",
-              "CurrentPrice": 42.40
-            },
-            "Quantity": 15
-          },
-          {
-            "Product": {
-              "Id": 100005,
-              "Name": "Preke-5",
-              "CurrentPrice": 49.50
-            },
-            "Quantity": 2
-          }
-        ],
-        "OrderStatus": "Completed"
-      },
-      {
-        "Id": 202203004,
-        "OrderDate": "2022-04-08T08:14:16",
-        "OrderProducts": [
           {
             "Product": {
               "Id": 100010,
               "Name": "Preke-10",
-              "CurrentPrice": 17.82
-            },
-            "Quantity": 16
-          },
-          {
-            "Product": {
-              "Id": 100007,
-              "Name": "Preke-7",
-              "CurrentPrice": 13.78
-            },
-            "Quantity": 13
-          },
-          {
-            "Product": {
-              "Id": 100001,
-              "Name": "Preke-1",
-              "CurrentPrice": 7.82
-            },
-            "Quantity": 7
-          },
-          {
-            "Product": {
-              "Id": 100005,
-              "Name": "Preke-5",
-              "CurrentPrice": 20.18
+              "CurrentPrice": 9.89
             },
             "Quantity": 4
           },
           {
             "Product": {
-              "Id": 100012,
-              "Name": "Preke-12",
-              "CurrentPrice": 2.81
-            },
-            "Quantity": 7
-          }
-        ],
-        "OrderStatus": "Completed"
-      },
-      {
-        "Id": 202203005,
-        "OrderDate": "2022-02-07T22:00:49",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100007,
-              "Name": "Preke-7",
-              "CurrentPrice": 29.27
-            },
-            "Quantity": 7
-          },
-          {
-            "Product": {
-              "Id": 100009,
-              "Name": "Preke-9",
-              "CurrentPrice": 42.25
-            },
-            "Quantity": 6
-          },
-          {
-            "Product": {
-              "Id": 100003,
-              "Name": "Preke-3",
-              "CurrentPrice": 6.28
-            },
-            "Quantity": 12
-          },
-          {
-            "Product": {
-              "Id": 100014,
-              "Name": "Preke-14",
-              "CurrentPrice": 44.61
-            },
-            "Quantity": 13
-          }
-        ],
-        "OrderStatus": "Completed"
-      }
-    ]
-  },
-  {
-    "Client": {
-      "Id": 4,
-      "BusinessName": "UAB Company-4",
-      "BusinessCode": 800000004,
-      "VatNumber": "LT100000000004",
-      "BusinessAddress": {
-        "Street": "Gatve-5",
-        "City": "Kaunas",
-        "PostalCode": 90000,
-        "Country": "Lietuva"
-      },
-      "ShippingAddress": {
-        "Street": "Gatve-1",
-        "City": "Kaunas",
-        "PostalCode": 90000,
-        "Country": "Lietuva"
-      }
-    },
-    "OrderList": [
-      {
-        "Id": 202204000,
-        "OrderDate": "2022-01-22T09:03:09",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100002,
-              "Name": "Preke-2",
-              "CurrentPrice": 49.84
-            },
-            "Quantity": 16
-          },
-          {
-            "Product": {
-              "Id": 100013,
-              "Name": "Preke-13",
-              "CurrentPrice": 15.75
-            },
-            "Quantity": 9
-          },
-          {
-            "Product": {
-              "Id": 100008,
-              "Name": "Preke-8",
-              "CurrentPrice": 30.88
-            },
-            "Quantity": 11
-          }
-        ],
-        "OrderStatus": "Pending_payment"
-      },
-      {
-        "Id": 202204001,
-        "OrderDate": "2022-03-12T08:54:51",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100002,
-              "Name": "Preke-2",
-              "CurrentPrice": 27.87
-            },
-            "Quantity": 2
-          },
-          {
-            "Product": {
-              "Id": 100004,
-              "Name": "Preke-4",
-              "CurrentPrice": 27.76
-            },
-            "Quantity": 12
-          },
-          {
-            "Product": {
-              "Id": 100009,
-              "Name": "Preke-9",
-              "CurrentPrice": 37.84
-            },
-            "Quantity": 3
-          },
-          {
-            "Product": {
               "Id": 100011,
               "Name": "Preke-11",
-              "CurrentPrice": 12.80
-            },
-            "Quantity": 7
-          },
-          {
-            "Product": {
-              "Id": 100003,
-              "Name": "Preke-3",
-              "CurrentPrice": 8.62
-            },
-            "Quantity": 19
-          }
-        ],
-        "OrderStatus": "Pending_payment"
-      },
-      {
-        "Id": 202204002,
-        "OrderDate": "2022-04-14T06:11:27",
-        "OrderProducts": [
-          {
-            "Product": {
-              "Id": 100008,
-              "Name": "Preke-8",
-              "CurrentPrice": 36.59
-            },
-            "Quantity": 9
-          },
-          {
-            "Product": {
-              "Id": 100006,
-              "Name": "Preke-6",
-              "CurrentPrice": 13.21
-            },
-            "Quantity": 6
-          },
-          {
-            "Product": {
-              "Id": 100010,
-              "Name": "Preke-10",
-              "CurrentPrice": 28.18
+              "CurrentPrice": 42.01
             },
             "Quantity": 17
           },
           {
             "Product": {
-              "Id": 100012,
-              "Name": "Preke-12",
-              "CurrentPrice": 6.68
+              "Id": 100002,
+              "Name": "Preke-2",
+              "CurrentPrice": 23.12
             },
-            "Quantity": 5
+            "Quantity": 14
           }
         ],
+        "OrderTotalAmount": 1169.93,
         "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202204001,
+        "OrderDate": "2022-02-20T06:10:11",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100013,
+              "Name": "Preke-13",
+              "CurrentPrice": 27.66
+            },
+            "Quantity": 2
+          }
+        ],
+        "OrderTotalAmount": 55.32,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202204002,
+        "OrderDate": "2022-03-22T17:46:07",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100010,
+              "Name": "Preke-10",
+              "CurrentPrice": 12.81
+            },
+            "Quantity": 11
+          },
+          {
+            "Product": {
+              "Id": 100014,
+              "Name": "Preke-14",
+              "CurrentPrice": 3.08
+            },
+            "Quantity": 15
+          },
+          {
+            "Product": {
+              "Id": 100002,
+              "Name": "Preke-2",
+              "CurrentPrice": 46.47
+            },
+            "Quantity": 8
+          },
+          {
+            "Product": {
+              "Id": 100009,
+              "Name": "Preke-9",
+              "CurrentPrice": 3.43
+            },
+            "Quantity": 11
+          },
+          {
+            "Product": {
+              "Id": 100007,
+              "Name": "Preke-7",
+              "CurrentPrice": 1.00
+            },
+            "Quantity": 13
+          }
+        ],
+        "OrderTotalAmount": 609.60,
+        "OrderStatus": "Completed"
+      },
+      {
+        "Id": 202204003,
+        "OrderDate": "2022-03-09T09:56:54",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100001,
+              "Name": "Preke-1",
+              "CurrentPrice": 22.91
+            },
+            "Quantity": 19
+          },
+          {
+            "Product": {
+              "Id": 100003,
+              "Name": "Preke-3",
+              "CurrentPrice": 40.65
+            },
+            "Quantity": 14
+          },
+          {
+            "Product": {
+              "Id": 100010,
+              "Name": "Preke-10",
+              "CurrentPrice": 45.42
+            },
+            "Quantity": 14
+          }
+        ],
+        "OrderTotalAmount": 1640.27,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202204004,
+        "OrderDate": "2022-04-08T03:43:56",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100008,
+              "Name": "Preke-8",
+              "CurrentPrice": 43.30
+            },
+            "Quantity": 18
+          },
+          {
+            "Product": {
+              "Id": 100004,
+              "Name": "Preke-4",
+              "CurrentPrice": 29.80
+            },
+            "Quantity": 17
+          }
+        ],
+        "OrderTotalAmount": 1286.00,
+        "OrderStatus": "Completed"
+      },
+      {
+        "Id": 202204005,
+        "OrderDate": "2022-02-27T08:18:31",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100004,
+              "Name": "Preke-4",
+              "CurrentPrice": 15.28
+            },
+            "Quantity": 6
+          },
+          {
+            "Product": {
+              "Id": 100007,
+              "Name": "Preke-7",
+              "CurrentPrice": 6.33
+            },
+            "Quantity": 5
+          },
+          {
+            "Product": {
+              "Id": 100002,
+              "Name": "Preke-2",
+              "CurrentPrice": 33.73
+            },
+            "Quantity": 14
+          },
+          {
+            "Product": {
+              "Id": 100008,
+              "Name": "Preke-8",
+              "CurrentPrice": 33.78
+            },
+            "Quantity": 13
+          }
+        ],
+        "OrderTotalAmount": 1034.69,
+        "OrderStatus": "Completed"
+      },
+      {
+        "Id": 202204006,
+        "OrderDate": "2022-01-16T23:00:22",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100014,
+              "Name": "Preke-14",
+              "CurrentPrice": 15.73
+            },
+            "Quantity": 19
+          },
+          {
+            "Product": {
+              "Id": 100004,
+              "Name": "Preke-4",
+              "CurrentPrice": 9.95
+            },
+            "Quantity": 4
+          }
+        ],
+        "OrderTotalAmount": 338.67,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202204007,
+        "OrderDate": "2022-02-15T16:56:16",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100004,
+              "Name": "Preke-4",
+              "CurrentPrice": 33.84
+            },
+            "Quantity": 2
+          },
+          {
+            "Product": {
+              "Id": 100014,
+              "Name": "Preke-14",
+              "CurrentPrice": 32.07
+            },
+            "Quantity": 16
+          }
+        ],
+        "OrderTotalAmount": 580.80,
+        "OrderStatus": "Pending_payment"
+      },
+      {
+        "Id": 202204008,
+        "OrderDate": "2022-03-26T02:41:02",
+        "OrderProducts": [
+          {
+            "Product": {
+              "Id": 100010,
+              "Name": "Preke-10",
+              "CurrentPrice": 46.46
+            },
+            "Quantity": 17
+          },
+          {
+            "Product": {
+              "Id": 100005,
+              "Name": "Preke-5",
+              "CurrentPrice": 47.13
+            },
+            "Quantity": 13
+          },
+          {
+            "Product": {
+              "Id": 100002,
+              "Name": "Preke-2",
+              "CurrentPrice": 36.47
+            },
+            "Quantity": 1
+          }
+        ],
+        "OrderTotalAmount": 1438.98,
+        "OrderStatus": "Completed"
       }
     ]
   }

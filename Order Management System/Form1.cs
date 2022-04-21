@@ -20,11 +20,11 @@ namespace Order_Management_System
         public Form1()
         {
             InitializeComponent();
-            // SerializeData serializeData = new SerializeData();
-            // serializeData.GenerateJsonFile();
+            SerializeData serializeData = new SerializeData();
+            serializeData.GenerateJsonFile();
         }
 
-        private void generateBtn_Click(object sender, EventArgs e)
+        private void generatePendingPaymentReport_Click(object sender, EventArgs e)
         {
             GenerateCustomersReport clients = new GenerateCustomersReport();
             GenerateAllCustomersReport allCustomers = new GenerateAllCustomersReport();
@@ -42,7 +42,30 @@ namespace Order_Management_System
                 {
                     // Can use dialog.FileName
                     string fileName = dialog.FileName;
-                    allCustomers.GenerateAllCustomers(fileName);
+                    clients.GenerateAllPendingPaymentOrders(fileName);
+                    MessageBox.Show("Report is generated!!!");
+                }
+            }
+        }
+
+        private void generateAllCustomersReport_Click(object sender, EventArgs e)
+        {
+            GenerateAllCustomersReport allCustomers = new GenerateAllCustomersReport();
+            string result = "";
+
+            displayBlock.Text = result;
+
+            using (SaveFileDialog dialog = new SaveFileDialog())
+            {
+                dialog.Filter = "html files (*.html)|*.html";
+                dialog.FilterIndex = 2;
+                dialog.RestoreDirectory = true;
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Can use dialog.FileName
+                    string fileName = dialog.FileName;
+                    allCustomers.GenerateAllOrdersOfCustomerReport(fileName);
                     MessageBox.Show("Report is generated!!!");
                 }
             }

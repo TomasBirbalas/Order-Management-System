@@ -14,7 +14,7 @@ namespace Services
         public ClientOrderRepo clientOrderRepo { get; set; }
         List<ClientOrder> clientOrders { get; set; }
 
-        public void GenerateAllCustomers(string fileName)
+        public void GenerateAllOrdersOfCustomerReport(string fileName)
         {
             StreamWriter page = new StreamWriter(fileName);
             // Create html-document
@@ -93,11 +93,11 @@ namespace Services
                 page.WriteLine("</div>");
                 page.WriteLine("<div class='total-order-details'>");
                     page.WriteLine("<div class='pending-orders'>");
-                        page.WriteLine("<h4>Completed Orders Sum</h4>");
+                        page.WriteLine("<h4>Completed orders amount</h4>");
                         page.WriteLine($"<h3>{completedOrdersTotalAmount} Eur</h3>");
                     page.WriteLine("</div>");
                     page.WriteLine("<div class='pending-orders'>");
-                        page.WriteLine("<h4>Total pending Orders Sum</h4>");
+                        page.WriteLine("<h4>Total pending orders amount</h4>");
                         page.WriteLine($"<h3>{pendingPaymentOrdersTotalAmount} Eur</h3>");
                     page.WriteLine("</div>");
                 page.WriteLine("</div>");
@@ -117,11 +117,7 @@ namespace Services
                     <h2>{sortedClients[i].Client.BusinessName}</h2>
                     <span>Vat number: {sortedClients[i].Client.VatNumber}</span>
                     <span>Company code: {sortedClients[i].Client.BusinessCode}</span>
-                    <span>Address:</span>
-                    <span>{sortedClients[i].Client.BusinessAddress.Street}</span>
-                    <span>{sortedClients[i].Client.BusinessAddress.City}</span>
-                    <span>{sortedClients[i].Client.BusinessAddress.PostalCode}</span>
-                    <span>{sortedClients[i].Client.BusinessAddress.Country}</span>
+                    <span>Address: {sortedClients[i].Client.BusinessAddress.Street}, {sortedClients[i].Client.BusinessAddress.City}, {sortedClients[i].Client.BusinessAddress.PostalCode}, {sortedClients[i].Client.BusinessAddress.Country}</span>
                 </div>
                 ");
             }
