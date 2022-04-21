@@ -34,7 +34,16 @@ namespace JsonSerializeris
 
                     List<OrderProduct> productsInOrder = GenerateProductList();
 
-                    ordersList.Add(new Order(Convert.ToInt32($"20220{i}000") + j, date.Next(), productsInOrder, orderStatus));
+                    List<decimal> totalAmount = new List<decimal>();
+                    productsInOrder.ForEach(product =>
+                    {
+                        decimal currentPrice = product.Product.CurrentPrice;
+                        int quantity = product.Quantity;
+                        decimal total = currentPrice * quantity;
+                        totalAmount.Add(total);
+                    });
+
+                    ordersList.Add(new Order(Convert.ToInt32($"20220{i}000") + j, date.Next(), productsInOrder, totalAmount.Sum(), orderStatus));
                 }
                 clientsOrders.Add(new ClientOrder(client[i], ordersList));
             }
