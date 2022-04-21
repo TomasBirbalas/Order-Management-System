@@ -1,14 +1,21 @@
-using System;
 using Xunit;
+using JsonSerializeris;
+using System.Collections.Generic;
+using Business;
 
 namespace unitTest
 {
-    public class UnitTest1
+    public class unitTest1
     {
         [Fact]
-        public void Test1()
+        public void GenerateRandomOrderProductListMoreThenOneItemInList()
         {
+            SerializeData serializeData = new SerializeData();
+            List<OrderProduct> productsInOrder = serializeData.GenerateProductList();
 
+            var actual = productsInOrder.Count > 0 ? true : false ;
+            var expected = true;
+            Assert.True(actual == expected);
         }
     }
 }
