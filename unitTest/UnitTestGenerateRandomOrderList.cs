@@ -5,7 +5,7 @@ using Business;
 
 namespace unitTest
 {
-    public class unitTest1
+    public class UnitTestGenerateRandomOrderList
     {
         [Fact]
         public void GenerateRandomOrderProductListMoreThenOneItemInList()
