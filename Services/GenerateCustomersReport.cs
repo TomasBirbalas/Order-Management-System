@@ -26,7 +26,6 @@ namespace Services
 
             List<Order> pendingPaymentOrders = new List<Order>();
 
-            string result = "";
             decimal sumOfTotalPendingPayments = 0;
 
             var listOfTotal = new List<decimal> {};
