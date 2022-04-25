@@ -8,10 +8,9 @@ namespace Deserializer
 {
     public class DataDeserializer
     {
-        public List<ClientOrder> DeserializeDataFile()
+        public List<ClientOrder> DeserializeDataFile(string filepath)
         {
-            var path = @"..\..\..\..\DataAccess\JSONdata\ProjectData.json";
-            var jsonString = File.ReadAllText(path);
+            var jsonString = File.ReadAllText(filepath);
             List<ClientOrder> jsonData = JsonSerializer.Deserialize<List<ClientOrder>>(jsonString);
 
             return jsonData;
