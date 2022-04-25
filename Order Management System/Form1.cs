@@ -20,14 +20,13 @@ namespace Order_Management_System
         public Form1()
         {
             InitializeComponent();
-            SerializeData serializeData = new SerializeData();
+            DataSerializer serializeData = new DataSerializer();
             serializeData.GenerateJsonFile();
         }
 
         private void generatePendingPaymentReport_Click(object sender, EventArgs e)
         {
-            GenerateCustomersReport clients = new GenerateCustomersReport();
-            GenerateAllCustomersReport allCustomers = new GenerateAllCustomersReport();
+            PendingPaymentGenerator clients = new PendingPaymentGenerator();
 
             using (SaveFileDialog dialog = new SaveFileDialog())
             {
@@ -47,7 +46,7 @@ namespace Order_Management_System
 
         private void generateAllCustomersReport_Click(object sender, EventArgs e)
         {
-            GenerateAllCustomersReport allCustomers = new GenerateAllCustomersReport();
+            CustomersReportGenerator allCustomers = new CustomersReportGenerator();
 
             using (SaveFileDialog dialog = new SaveFileDialog())
             {

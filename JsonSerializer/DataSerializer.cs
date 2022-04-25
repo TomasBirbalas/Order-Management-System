@@ -8,7 +8,7 @@ using System.Text.Json;
 
 namespace JsonSerializeris
 {
-    public class SerializeData
+    public class DataSerializer
     {
         public void GenerateJsonFile()
         {

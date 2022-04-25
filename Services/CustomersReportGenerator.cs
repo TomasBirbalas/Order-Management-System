@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Services
 {
-    public class GenerateAllCustomersReport
+    public class CustomersReportGenerator
     {
         public ClientOrderRepo clientOrderRepo { get; set; }
         List<ClientOrder> clientOrders { get; set; }
