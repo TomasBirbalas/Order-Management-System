@@ -53,6 +53,11 @@ namespace JsonSerializeris
             string jsonString = JsonSerializer.Serialize(clientsOrders, options);
             var jsonPath = @"..\..\..\..\DataAccess\JSONdata\ProjectData.json";
 
+            if (!Directory.Exists(Path.GetDirectoryName(jsonPath)))
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(jsonPath));
+            }
+
             File.WriteAllText(jsonPath, jsonString);
         }
         public List<OrderProduct> GenerateProductList()

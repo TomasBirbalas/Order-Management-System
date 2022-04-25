@@ -10,6 +10,10 @@ namespace Deserializer
     {
         public List<ClientOrder> DeserializeDataFile(string filepath)
         {
+            if (!Directory.Exists(Path.GetDirectoryName(filepath)))
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(filepath));
+            }
             var jsonString = File.ReadAllText(filepath);
             List<ClientOrder> jsonData = JsonSerializer.Deserialize<List<ClientOrder>>(jsonString);
 
