@@ -6,7 +6,7 @@ using System.Text.Json;
 
 namespace Deserializer
 {
-    public class DeserializeAllData
+    public class DataDeserializer
     {
         public List<ClientOrder> DeserializeDataFile()
         {

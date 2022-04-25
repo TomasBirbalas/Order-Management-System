@@ -11,7 +11,7 @@ namespace DataAccess
 
         public ClientOrderRepo()
         {
-            DeserializeAllData deserializeAllData = new DeserializeAllData();
+            DataDeserializer deserializeAllData = new DataDeserializer();
             orderList = deserializeAllData.DeserializeDataFile();
         }
         public List<ClientOrder> RetrieveClientOrderList()
